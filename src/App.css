@@ -1,0 +1,234 @@
+.header {
+  background-color: var(--col-green-dark);
+  background-image: url(/images/bg-header-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 15dvh;
+  width: 100%;
+
+  @media screen and (min-width: 650px) {
+    background-image: url(/images/bg-header-desktop.svg);
+    height: 15dvh;
+    background-size: cover;
+  }
+}
+
+.main {
+  position: relative;
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* ! ====== Filter style */
+.filterbox {
+  background-color: white;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+
+  @media screen and (min-width: 650px) {
+    padding: 1.5rem;
+  }
+}
+
+.tag__list {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.filterbox__btn {
+  color: var(--col-gray);
+  font-weight: 700;
+
+  &:hover {
+    color: var(--col-green);
+    text-decoration: underline;
+  }
+}
+
+/* !========== Tag design */
+
+.tag {
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  span {
+    display: inline-block;
+    background-color: var(--col-bg);
+    padding: 0.3rem 0.5rem;
+    font-weight: 700;
+    color: var(--col-green);
+  }
+}
+
+.tag__btn {
+  background-color: var(--col-green);
+  height: 100%;
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: var(--col-green-dark);
+  }
+}
+
+/* !=============Card list */
+.cardlist {
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+
+  @media screen and (min-width: 650px) {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+}
+
+/* !============ Card ==================== */
+.card {
+  position: relative;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem 1rem 1rem 1rem;
+  width: 100%;
+  max-width: 450px;
+
+  @media screen and (min-width: 650px) {
+    flex-wrap: nowrap;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 100px 280px 1fr;
+    padding: 1.5rem;
+    align-items: center;
+    border-left: 5px solid transparent;
+    transition: all 0.5s;
+
+    &:hover {
+      border-color: var(--col-green);
+    }
+  }
+}
+
+.card__img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: -25px;
+
+  @media screen and (min-width: 650px) {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    top: 0px;
+  }
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  @media screen and (min-width: 650px) {
+    gap: 10px;
+  }
+}
+
+.center__top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  @media screen and (min-width: 650px) {
+    gap: 0.5rem;
+  }
+}
+
+.company__name {
+  font-weight: 700;
+  color: var(--col-green);
+  margin-right: 1rem;
+}
+
+.new {
+  background-color: var(--col-green);
+  color: white;
+  padding: 3px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 650px) {
+    padding: 2px 8px;
+    font-size: 14px;
+  }
+}
+
+.featured {
+  background-color: var(--col-green-dark);
+  color: white;
+  padding: 3px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 650px) {
+    padding: 2px 8px;
+    font-size: 14px;
+  }
+}
+
+.position {
+  font-weight: 700;
+  color: var(--col-green-dark);
+  font-size: 18px;
+
+  &:hover {
+    color: var(--col-green);
+    cursor: pointer;
+  }
+}
+
+.center__bottom {
+  display: flex;
+  color: var(--col-gray);
+  gap: 1rem;
+  border-bottom: 1px solid var(--col-gray);
+  padding-bottom: 12px;
+
+  @media screen and (min-width: 650px) {
+    border: none;
+  }
+}
+
+.chip__list {
+  padding-block: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-self: end;
+}
+.chip {
+  background-color: var(--col-bg);
+  color: var(--col-green);
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 3px;
+
+  cursor: pointer;
+  transition: transform 0.5s;
+  &:hover {
+    background-color: var(--col-green);
+    color: var(--col-bg);
+  }
+}
