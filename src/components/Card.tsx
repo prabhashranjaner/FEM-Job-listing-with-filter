@@ -4,7 +4,7 @@ const Card = ({ item, handleAddTag }: PropsType) => {
   const tagArray = [...item.languages, ...item.tools];
   return (
     <div className="card">
-      <img src="/images/faceit.svg" alt="logo" className="card__img" />
+      <img src={item.logo} alt="logo" className="card__img" />
       {/* Center */}
       <div className="center">
         <div className="center__top">

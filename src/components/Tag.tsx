@@ -9,7 +9,7 @@ const Tag = ({ item, setSearchTags, searchTags }: PropsType) => {
     <div className="tag">
       <span>{item}</span>
       <button className="tag__btn" onClick={handleRemoveTag}>
-        <img alt="cancel icon" src="/public/images/icon-remove.svg" />
+        <img alt="cancel icon" src="/images/icon-remove.svg" />
       </button>
     </div>
   );
